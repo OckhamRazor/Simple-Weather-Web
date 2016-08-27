@@ -1,0 +1,20 @@
+.weather-box{
+    width: 14em;
+    min-width: 14em;
+    margin-bottom: .8em;
+    margin: 0 auto;
+}
+
+.weather-box img{
+    height: 8em;
+    margin: 0 auto;
+    display: block;
+}
+
+.weather-box-date{
+    text-align: center;
+}
+
+.weather-box-date span{
+    font-size: 1.6em;
+}

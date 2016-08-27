@@ -1,0 +1,25 @@
+.weather-date-select{
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 2em;
+}
+
+.weather-date-select h2{
+    font-size: 3em;
+    font-weight: normal;
+}
+
+.weather-date-select p{
+    font-size: 2em;
+}
+
+.loading-tips{
+    display: flex;
+    height: calc(100vh - 4em);
+    justify-content: center;
+    align-content: center;
+}
+
+.loading-tips>div{
+    margin: auto;
+}

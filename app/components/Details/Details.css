@@ -1,0 +1,10 @@
+.details-container{
+    padding-top: 2em;
+}
+
+.details-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,29 @@
+.home-page{
+    width: 100%;
+    height: calc(100vh - 4em);
+
+    background: url("../../../assets/images/pattern.svg") no-repeat;
+    background-size: cover;
+    background-position: left top;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.home-page-content{
+    margin: auto;
+    text-align: center;
+}
+
+.home-page-content h1{
+    color: white;
+    margin-bottom: .5em;
+    font-size: 3em;
+    font-weight: normal;
+}
+
+.home-page-content .search-input{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: .5em;
+}

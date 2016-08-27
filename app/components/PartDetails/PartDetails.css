@@ -1,0 +1,32 @@
+.part-details-container{
+    width: 12em;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+.part-details-container>h3{
+    text-align: center;
+    font-size: 2em;
+    font-weight: normal;
+}
+
+.part-details-list{
+    list-style: none;
+    padding: 0;
+
+    margin-left: -1.5em;
+}
+
+.part-details-list>li{
+    width: 12em;
+    margin: 0 auto;
+    font-size: 1.2em;
+    padding: .5em .8em;
+}
+
+
+.part-details-item-title{
+    display: inline-block;
+    width: 6em;
+    text-align: right;
+}
