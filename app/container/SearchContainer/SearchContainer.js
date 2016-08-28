@@ -8,6 +8,9 @@ import React from 'react';
 var Search =require('../../components/Search/Search');
 //emitter
 var myEmitter = require('../../utils/Emitter');
+// require.ensure([],function (require) {
+//     var myEmitter =  require('./../../utils/Emitter');
+// });
 
 var SearchContainer = React.createClass({
     contextTypes: {

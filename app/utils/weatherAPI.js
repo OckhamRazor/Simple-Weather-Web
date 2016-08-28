@@ -3,7 +3,7 @@
  */
 //import axios from 'axios';
 //websocket
-var socket = io();
+//var socket = io();
 //测试数据
 const WEATHER_DATA = {
     "reason":"successed!",
@@ -241,30 +241,30 @@ const ERROR_DATA = {
 };
 
 function getWeatherAllInfo(cityname) {
-    // //模拟从后台获取数据
-    // if (cityname==='hello'){
-    //     return new Promise(function (resolve,reject) {
-    //         resolve(WEATHER_DATA);
-    //     });
-    // }
-    //
-    // return new Promise(function (resolve,reject) {
-    //            resolve(ERROR_DATA);
-    //         });
+    //模拟从后台获取数据
+    if (cityname==='hello'){
+        return new Promise(function (resolve,reject) {
+            resolve(WEATHER_DATA);
+        });
+    }
 
-    socket.emit('weather',{
-        cityname: cityname
-    });
     return new Promise(function (resolve,reject) {
-                socket.on('weather', function (data) {
-                    if (data){
-                        let weatherInfo = JSON.parse(data.weather);
-                        resolve(weatherInfo);
-                    }else{
-                        reject();
-                    }
-                });
+               resolve(ERROR_DATA);
             });
+
+    // socket.emit('weather',{
+    //     cityname: cityname
+    // });
+    // return new Promise(function (resolve,reject) {
+    //             socket.on('weather', function (data) {
+    //                 if (data){
+    //                     let weatherInfo = JSON.parse(data.weather);
+    //                     resolve(weatherInfo);
+    //                 }else{
+    //                     reject();
+    //                 }
+    //             });
+    //         });
 }
 
 

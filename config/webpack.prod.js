@@ -15,6 +15,7 @@ module.exports = webpackMerge(commonConfig, {
         path: helpers.root('server','public'),
         publicPath: '/',
         filename: '[name].[hash].js',
+        chunkFilename: "[name].[chunkhash].js"
     },
     plugins: [
         new webpack.NoErrorsPlugin(),

@@ -16,9 +16,11 @@ var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-    entry: [
-        './app/index.js'
-    ],
+    entry: {
+        app: './app/index.js',
+        vendor: ["react", "react-dom","react-router"]//,
+        // common: ['./app/utils/formatData.js']
+    },
     //默认拓展名匹配
     resolve: {
         extensions: ['', '.js']
@@ -27,10 +29,14 @@ module.exports = {
         loaders: [
             {test: /\.js$/, exclude:/node_modules/, loader:"babel-loader"},
             {test: /\.css$/, exclude:/node_modules/,loader: ExtractTextPlugin.extract("style-loader", "css-loader")},
-            {test: /\.(png|jpg|svg)$/,loader: 'file-loader?limit=8192&name=assets/images/[name].[ext]'}
+            {test: /\.(png|jpg|svg)$/,loader: 'file-loader?limit=8192&name=assets/images/[name].[ext]'},
+            {test: /\.ico$/,loader: 'file-loader?name=assets/favicon/[name].[ext]'}
         ]
     },
     plugins: [
-        HTMLWebpackPluginConfig
+        HTMLWebpackPluginConfig,
+        new webpack.optimize.CommonsChunkPlugin({
+            names: ['vendor']
+        }),
     ]
 };

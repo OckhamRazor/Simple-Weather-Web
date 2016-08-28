@@ -2,6 +2,10 @@
  * Created by baobaobao on 2016/8/26.
  */
 import React from 'react';
+//pack the images
+require('../../../assets/images/sun.svg');
+require('../../../assets/images/cloud.svg');
+require('../../../assets/images/rain.svg');
 //css
 require('./WeatherDay.css');
 
